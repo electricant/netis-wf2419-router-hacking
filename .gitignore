@@ -24,3 +24,8 @@
 *.la
 *.a
 *.lib
+
+# squashfs compiled binaries
+mksquashfs
+mksquashfs-lzma
+
