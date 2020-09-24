@@ -1,4 +1,4 @@
-# Netis WF2419 Ruter Hacking
+# Netis WF2419 Router Hacking
 
 Notes, logs and code used in order to try to hack the firmware running on the
 Netis WF2419 router.
