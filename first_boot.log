@@ -1,0 +1,188 @@
+
+=============================
+
+<Probe SPI #0 >
+
+1.Manufacture ID=0xef
+
+2.Device ID=0x40
+
+3.Capacity ID=0x16
+
+4.Winbond SPI (4 MByte)!
+
+5.Total sector-counts = 1024(sector=4KB)
+
+6.spi_flash_info[0].device_size = 22
+
+01_8198_SFCR(b8001200) =1f800000
+
+01_8198_SFCR2(b8001204) =bb08000
+
+01_8198_SFCSR(b8001208) =d8350000
+
+
+---RealTek(RTL8196C)at 2014.08.29-12:43+0800 version v1.1c [16bit](390MHz)
+
+no sys signature at 00010000!
+
+no sys signature at 00020000!
+
+Jump to image start=0x80500000...
+
+decompressing kernel:
+Uncompressing Linux... done, booting the kernel.
+done decompressing kernel.
+RTL8192C-RTL8188C driver version 1.5 (2012-05-04)
+
+serial console detected.  Disabling virtual terminals.
+
+init started:  BusyBox v1.00-pre8 (2015.01.23-06:46+0000) multi-call binary
+
+
+
+BusyBox v1.00-pre8 (2015.01.23-06:46+0000) Built-in shell (msh)
+Enter 'help' for a list of built-in commands.
+
+cp: /etc/tmp/pics*: No such file or directory
+WARNING [factory_args.c:check_and_restore_factory_args:623]: current: [0x2adb521c], the length is zero!
+50
+ 4.8d.38.c2.74.9c.0.0.0.0.0.0.
+save_param load /var/ppp/.pppoe.session 
+len = 0
+wlan_check.sh: do nothing......
+===================================================================================
+dnrd --cache=off  &
+WWW:netiscc, len:9
+
+domain:netis.cc, len:8
+
+WWW2:wwwnetiscc, len:13
+
+domain2:www.netis.cc, len:12
+
+killall: xhcatv: no process killed
+killall: multi_ppp: no process killed
+killall: igmpproxy: no process killed
+killall: udhcpc: no process killed
+wlanapp_sh:2042:@@@@@@@####;wlan0
+MIB_HW_TX_POWER_CCK_A=302f2f2f2f2e2e2e2e2d2d2d2d2c
+MIB_HW_TX_POWER_CCK_A_new=302f2f2f2f2e2e2e2e2d2d2d2d2c
+MIB_HW_TX_POWER_HT40_1S_A=302f2f2f2f2e2e2e2e2d2d2d2d2c
+MIB_HW_TX_POWER_HT40_1S_An=302f2f2f2f2e2e2e2e2d2d2d2d2c
+MIB_HW_TX_POWER_HT20=ffffffffffffffffffffffffffff
+MIB_HW_TX_POWER_HT20n=ffffffffffffffffffffffffffff
+MIB_HW_TX_POWER_DIFF_OFDM=6161616161616161616161616161
+MIB_HW_TX_POWER_DIFF_OFDMn=6161616161616161616161616161
+SIOCGIFFLAGS: No such device
+bridge br0 doesn't exist; can't delete it
+SIOCDELRT: No such process
+SIOCDELRT: No such process
+dhcp is dis----------------------------------------------
+wlanapp_sh:2042:@@@@@@@####;wlan0 wlan0-va0 wlan0-va1 wlan0-va2 wlan0-va3 wlan0-vxd
+iapp: not found
+wlanapp_sh:2334:wlan0:wlan0:wlan0-va3
+ip:192.168.1.1 mask:255.255.255.0 gw:192.168.1.254
+SIOCDELRT: No such process
+iwcontrol RegisterPID to (wlan0)
+* Setup Firewall
+port trigger stop.
+port trigger init, wan is eth1.
+port trigger start.
+doamin=3
+* Start NTP daemon
+/proc/sys/net/ipv4/conf/all/arp_ignore: cannot create
+/proc/sys/net/ipv4/conf/default/arp_ignore: cannot create
+iwpriv wlan0 set_mib bcnint=25--
+netis(WF2419I)-V2.12.36123,2015.06.30 16:47.
+time.windows.com: Unknown host
+========================END init.sh===============================
+321
+348
+/bin/ota_init.sh: not found
+351
+/bin/cdrom_wizard: not found
+killall: boa: no process killed
+365
+366
+telnetd.sh: not found
+# killall: boa: no process killed
+[run_webs_server_by_execv:46:restart_webs.c]
+Starting Protocol Module: HTTP Server                      ... OK
+create_server_socket-357:Bind err!caught SIGTERM, starting shutdown
+exiting Boa normally (uptime 1 seconds)
+Starting Protocol Module: HTTP Server                      ... OK
+
+# ls
+[1;34mbin[0m    [1;34metc[0m    [1;36mmedia[0m  [1;34msbin[0m   [1;36mtmp[0m    [1;34mvar[0m
+[1;34mdev[0m    [1;34mlib[0m    [1;34mproc[0m   [1;36msys[0m    [1;34musr[0m    [1;34mweb[0m
+# mount
+/dev/mtdblock1 on / type squashfs (ro)
+none on /proc type proc (rw)
+tmpfs on /var type tmpfs (rw)
+# df
+Filesystem           1k-blocks      Used Available Use% Mounted on
+/dev/mtdblock1            2048      2048         0 100% /
+tmpfs                     6144       176      5968   3% /var
+# cat /proc/cmdline
+root=/dev/mtdblock1 console=0 single
+# 
+# cat /proc/cmdline[J       cpuinfo
+system type		: Philips Nino
+processor		: 0
+cpu model		: R3000 V0.0
+BogoMIPS		: 389.12
+wait instruction	: yes
+microsecond timers	: no
+tlb_entries		: 32
+extra interrupt vector	: no
+hardware watchpoint	: no
+VCED exceptions		: not available
+VCEI exceptions		: not available
+ll emulations		: 0
+sc emulations		: 0
+# 
+# cat /proc/cpuinfo[J       version
+Linux version 2.4.18-MIPS-01.00 (root@netcore) (gcc version 3.4.6-1.3.6) #1 Tue Jun 30 16:56:20 CST 2015
+# 
+# cat /proc/version[J
+Linux version 2.4.18-MIPS-01.00 (root@netcore) (gcc version 3.4.6-1.3.6) #1 Tue Jun 30 16:56:20 CST 2015
+# 
+# cat /proc/version[J
+# cat /proc/version[J
+# cat /proc/cpuinfo[J
+system type		: Philips Nino
+processor		: 0
+cpu model		: R3000 V0.0
+BogoMIPS		: 389.12
+wait instruction	: yes
+microsecond timers	: no
+tlb_entries		: 32
+extra interrupt vector	: no
+hardware watchpoint	: no
+VCED exceptions		: not available
+VCEI exceptions		: not available
+ll emulations		: 0
+sc emulations		: 0
+# 
+# cat /proc/cpuinfo[J
+# cat /proc/version[J
+# cat /proc/version[J
+# cat /proc/cpuinfo[J
+# cat /proc/cmdline[J
+root=/dev/mtdblock1 console=0 single
+# cat /proc/cpuinfo
+system type		: Philips Nino
+processor		: 0
+cpu model		: R3000 V0.0
+BogoMIPS		: 389.12
+wait instruction	: yes
+microsecond timers	: no
+tlb_entries		: 32
+extra interrupt vector	: no
+hardware watchpoint	: no
+VCED exceptions		: not available
+VCEI exceptions		: not available
+ll emulations		: 0
+sc emulations		: 0
+# 
