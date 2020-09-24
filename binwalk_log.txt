@@ -1,0 +1,44 @@
+$ binwalk -e firmware_orig.bin 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+4976          0x1370          LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 68320 bytes
+207888        0x32C10         LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 2338816 bytes
+851968        0xD0000         Squashfs filesystem, big endian, version 2.0, size: 2076096 bytes, 389 inodes, blocksize: 65536 bytes, created: 2015-06-30 08:57:47
+
+# Run recursively
+
+$ binwalk -eM firmware_orig.bin 
+
+Scan Time:     2020-08-14 20:26:36
+Target File:   /home/pol/Progetti/netis_wf2419i/firmware_orig.bin
+MD5 Checksum:  f03a657d0fd666ef7b281b178160aa6f
+Signatures:    391
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+4976          0x1370          LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 68320 bytes
+207888        0x32C10         LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 2338816 bytes
+851968        0xD0000         Squashfs filesystem, big endian, version 2.0, size: 2076096 bytes, 389 inodes, blocksize: 65536 bytes, created: 2015-06-30 08:57:47
+
+
+Scan Time:     2020-08-14 20:26:37
+Target File:   /home/pol/Progetti/netis_wf2419i/_firmware_orig.bin-0.extracted/1370
+MD5 Checksum:  b11f1fa953d791774f180b80c290370e
+Signatures:    391
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+
+
+Scan Time:     2020-08-14 20:26:37
+Target File:   /home/pol/Progetti/netis_wf2419i/_firmware_orig.bin-0.extracted/32C10
+MD5 Checksum:  db44ecba377a764a82135b385d6711cd
+Signatures:    391
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+674704        0xA4B90         Certificate in DER format (x509 v3), header length: 4, sequence length: 31
+1517048       0x1725F8        Certificate in DER format (x509 v3), header length: 4, sequence length: 130
+1939552       0x1D9860        Linux kernel version 2.4.18
+1947112       0x1DB5E8        Unix path: /usr/lib/libc.so.1
