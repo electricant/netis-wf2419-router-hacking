@@ -1,0 +1,25 @@
+* GPL code: 
+	http://www.netis-systems.com/Suppory/gpl.html
+	
+* Similar devices:
+	https://openwrt.org/inbox/toh/totolink_n300rt (unofficial)
+	
+* Build instructions:
+	http://archive.main.lv/writeup/rtl8196c_support_for_openwrt.html
+	http://archive.main.lv/writeup/building_openwrt_for_rtl8196c.html
+	
+* GIT sources:
+	OpenWrt for RTL8196C https://github.com/rlx-router/lede-rtl8196c
+	Ambrosian сode yard http://git.advem.lv/
+	This realtek port is based on hackpascal's RTL8196C
+		https://github.com/shibajee/openwrt-realtek
+	Buildroot RLX4181 https://github.com/shibajee/buildroot-rlx4181
+	RTL8196E -> https://github.com/shibajee/linux-rtl8196e
+	Compiles does not boot https://github.com/nekromant/linux-rlx-upstream/tree/rtl819x/arch/mips/rtl819x
+
+* squashfs-lzma
+	https://squashfs-lzma.org/
+	https://blog.403labs.com/post/44787007255/how-to-decompress-an-lzma-compressed-squashfs-on
+	https://unix.stackexchange.com/questions/90323/how-to-use-unsquashfs-with-lzma
+	https://docs.google.com/file/d/0BzD4hxGinKcycHFhOS13NWJTMms/edit
+	
