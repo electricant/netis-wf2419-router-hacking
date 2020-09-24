@@ -1,0 +1,119 @@
+superblock info:
+# unsquashfs -s D0000.squashfs 
+Reading a different endian SQUASHFS filesystem on D0000.squashfs
+Found a valid big endian SQUASHFS 2:0 superblock on D0000.squashfs.
+Creation or last append time Tue Jun 30 10:57:47 2015
+Filesystem size 2076096 bytes (2027.44 Kbytes / 1.98 Mbytes)
+Block size 65536
+Filesystem is not exportable via NFS
+Inodes are compressed
+Data is compressed
+Fragments are compressed
+Always-use-fragments option is not specified
+Check data is not present in the filesystem
+Duplicates are removed
+Number of fragments 27
+Number of inodes 389
+Number of uids 1
+Number of gids 0
+
+# unsquashfs D0000.squashfs 
+Reading a different endian SQUASHFS filesystem on D0000.squashfs
+read_ids: Bad inode count in super block
+File system corruption detected
+FATAL ERROR:failed to read file system tables
+
+# sasquatch D0000.squashfs 
+SquashFS version [512.0] / inode count [-2063532032] suggests a SquashFS image of a different endianess
+Reading a different endian SQUASHFS filesystem on D0000.squashfs
+Parallel unsquashfs: Using 1 processor
+Trying to decompress using default gzip decompressor...
+Trying to decompress with lzma...
+Trying to decompress with lzma-adaptive...
+Detected lzma-adaptive compression
+369 inodes (439 blocks) to write
+
+
+create_inode: could not create character device squashfs-root/dev/ptyp0, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp3, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ptyp4, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ppp, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp2, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp4, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp5, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyS0, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/mtdc2, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/mtdc1, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp1, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ptyp1, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/urandom, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp0, because you're not superuser!
+
+create_inode: could not create block device squashfs-root/dev/mtdblock1, because you're not superuser!
+
+create_inode: could not create block device squashfs-root/dev/mtd, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ptyp5, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyS1, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/null, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ttyp6, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ptyp2, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/console, because you're not superuser!
+
+create_inode: could not create character device squashfs-root/dev/ptyp3, because you're not superuser!
+[===========================================================|    ] 416/439  94%
+
+created 237 files
+created 20 directories
+created 109 symlinks
+created 0 devices
+created 0 fifos
+
+
+/var is empty. And also /dev is empty Why is it so?
+the original squashfs contains 389 inodes, the extracted 366. What is going on?
+If we count files in /dev we get exactly 389-366 = 23 files
+
+We have to extract the files as root:
+
+sudo sasquatch D0000.squashfs 
+[sudo] password for pol: 
+SquashFS version [512.0] / inode count [-2063532032] suggests a SquashFS image of a different endianess
+Reading a different endian SQUASHFS filesystem on D0000.squashfs
+Parallel unsquashfs: Using 1 processor
+Trying to decompress using default gzip decompressor...
+Trying to decompress with lzma...
+Trying to decompress with lzma-adaptive...
+Detected lzma-adaptive compression
+369 inodes (439 blocks) to write
+
+[===============================================================|] 439/439 100%
+
+created 237 files
+created 20 directories
+created 109 symlinks
+created 23 devices
+created 0 fifos
+
+Now we are talking!
+
+use squashfs-lzma to recreate file
+/home/pol/Progetti/netis_wf2419i/squashfs/squashfs-tools/mksquashfs-lzma squashfs-root new_D0000.squashfs -b 65536 -noappend -be

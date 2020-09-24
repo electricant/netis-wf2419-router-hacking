@@ -29,3 +29,10 @@
 mksquashfs
 mksquashfs-lzma
 
+# Firmware images (may contain non-free-licensed software)
+*.squashfs
+*.bin
+squashfs-root/
+32C10*
+1370*
+
