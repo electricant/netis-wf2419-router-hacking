@@ -5,5 +5,5 @@ Netis WF2419 router.
 
 Work in progress...
 
-See also the dedicated [diary on my blog](https://ipol.ml/articles/netis_WF2419I_hacking.html).
+See also the dedicated [diary on my blog](https://blog.scaramuzza.me/articles/netis_WF2419I_hacking.html).
 
